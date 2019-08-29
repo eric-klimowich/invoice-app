@@ -5,11 +5,11 @@ import Invoice from './Invoice'
 
 // import { invoiceData } from './Data'
 
-let trackingArray = []
+// let trackingArray = []
 let filteredTrackingArray = []
 
 const InvoiceList3 = props => {
-
+  let trackingArray = []
   props.invoices.forEach(invoice => {
     invoice.invoicedetail.forEach(innerInvoice => {
       trackingArray.push([invoice, innerInvoice])
