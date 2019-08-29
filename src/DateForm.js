@@ -20,13 +20,13 @@ class DateForm extends React.Component {
   handleStartDateChange = (startDate) => {
     this.setState({
       startDate: startDate
-    }, this.filterInvoiceDataByDate())
+    }, () => this.filterInvoiceDataByDate())
   }
 
   handleEndDateChange = (endDate) => {
     this.setState({
       endDate: endDate
-    }, this.filterInvoiceDataByDate())
+    }, () => this.filterInvoiceDataByDate())
   }
 
   filterInvoiceDataByDate = () => {
