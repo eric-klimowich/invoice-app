@@ -51,7 +51,9 @@ class DateForm extends React.Component {
           selected={this.state.endDate}
           onChange={this.handleEndDateChange}
         />
-
+        <InvoiceList invoices={this.state.invoices} />
+        <InvoiceList2 invoices={this.state.invoices} />
+        <InvoiceList3 invoices={this.state.invoices} />
       </div>
     )
   }

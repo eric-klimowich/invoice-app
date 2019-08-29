@@ -1,15 +1,17 @@
 import React from 'react'
 
 import Invoice from './Invoice'
+
 import { invoiceData } from './Data'
 
-const filteredInvoiceData = invoiceData.invoices.filter(invoice => {
-  return invoice.invoiceamount !== invoice.invoicedetail.reduce((total, detail) => {
-    return total + detail.detailamount
-  }, 0)
-})
+const InvoiceList2 = props => {
 
-const InvoiceList2 = () => {
+  const filteredInvoiceData = invoiceData.invoices.filter(invoice => {
+    return invoice.invoiceamount !== invoice.invoicedetail.reduce((total, detail) => {
+      return total + detail.detailamount
+    }, 0)
+  })
+
   return (
     <div>
       <h1>Report 2</h1>
