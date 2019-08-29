@@ -11,6 +11,8 @@ import { invoiceData } from './Data'
 
 class DateForm extends React.Component {
 
+  // There is no issue with the date range, working on capturing the date to represent midnight, not the current time of the current day, on that past date. Changed the date in the data table, which now works, but now creates an error with the endDate. Working on capturing just the year, month, and day when handlers are called.
+
   state = {
     startDate: new Date(),
     endDate: new Date(),
@@ -38,9 +40,9 @@ class DateForm extends React.Component {
   }
 
   render() {
-    // console.log(this.state.startDate)
-    // console.log(this.state.invoices)
-    // console.log(this.state.endDate)
+    console.log(this.state.startDate)
+    console.log(this.state.invoices)
+    console.log(this.state.endDate)
     return (
       <div>
         <h3>Start Date:</h3>
