@@ -2,11 +2,11 @@ import React from 'react'
 
 import Invoice from './Invoice'
 
-import { invoiceData } from './Data'
+// import { invoiceData } from './Data'
 
 const InvoiceList2 = props => {
 
-  const filteredInvoiceData = invoiceData.invoices.filter(invoice => {
+  const filteredInvoiceData = props.invoices.filter(invoice => {
     return invoice.invoiceamount !== invoice.invoicedetail.reduce((total, detail) => {
       return total + detail.detailamount
     }, 0)
