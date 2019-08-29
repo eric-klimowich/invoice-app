@@ -26,11 +26,26 @@ const InvoiceList3 = props => {
 
   // console.log(filteredTrackingArray)
 
+  const renderReportThree = props => {
+    if (props.invoices.length > 0) {
+      return (
+        <div>
+          <h1>Report 3</h1>
+          {filteredTrackingArray.map(invoice => <Invoice key={uuid.v4()} invoice={invoice[0]} trackingArray={invoice[1]} />)}
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <h1>Report 3</h1>
+          <h4>No invoices between those dates.</h4>
+        </div>
+      )
+    }
+  }
+
   return (
-    <div>
-      <h1>Report 3</h1>
-      {filteredTrackingArray.map(invoice => <Invoice key={uuid.v4()} invoice={invoice[0]} trackingArray={invoice[1]} />)}
-    </div>
+    renderReportThree(props)
   )
 }
 

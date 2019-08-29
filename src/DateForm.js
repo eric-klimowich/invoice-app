@@ -38,15 +38,17 @@ class DateForm extends React.Component {
   }
 
   render() {
-    console.log(this.state.startDate)
-    console.log(this.state.invoices)
-    console.log(this.state.endDate)
+    // console.log(this.state.startDate)
+    // console.log(this.state.invoices)
+    // console.log(this.state.endDate)
     return (
       <div>
+        <h3>Start Date:</h3>
         <DatePicker
           selected={this.state.startDate}
           onChange={this.handleStartDateChange}
         />
+        <h3>End Date:</h3>
         <DatePicker
           selected={this.state.endDate}
           onChange={this.handleEndDateChange}

@@ -12,11 +12,26 @@ const InvoiceList2 = props => {
     }, 0)
   })
 
+  const renderReportTwo = props => {
+    if (props.invoices.length > 0) {
+      return (
+        <div>
+          <h1>Report 2</h1>
+          {filteredInvoiceData.map(invoice => <Invoice key={invoice.invoicenum} invoice={invoice} discrepency={true} />)}
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <h1>Report 2</h1>
+          <h4>No invoices between those dates.</h4>
+        </div>
+      )
+    }
+  }
+
   return (
-    <div>
-      <h1>Report 2</h1>
-      {filteredInvoiceData.map(invoice => <Invoice key={invoice.invoicenum} invoice={invoice} discrepency={true} />)}
-    </div>
+    renderReportTwo(props)
   )
 }
 
