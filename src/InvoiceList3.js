@@ -3,14 +3,14 @@ import uuid from 'uuid'
 
 import Invoice from './Invoice'
 
-import { invoiceData } from './Data'
+// import { invoiceData } from './Data'
 
 let trackingArray = []
 let filteredTrackingArray = []
 
 const InvoiceList3 = props => {
 
-  invoiceData.invoices.forEach(invoice => {
+  props.invoices.forEach(invoice => {
     invoice.invoicedetail.forEach(innerInvoice => {
       trackingArray.push([invoice, innerInvoice])
     })
