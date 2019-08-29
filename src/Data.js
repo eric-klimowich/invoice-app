@@ -1,5 +1,5 @@
-const date1 = new Date(2014, 0, 1)
-const date2 = new Date(2014, 0, 2)
+const date1 = new Date(2019, 7, 1)
+const date2 = new Date(2019, 7, 2)
 
 export const invoiceData = {
   invoices: [
