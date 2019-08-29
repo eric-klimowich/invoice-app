@@ -1,4 +1,4 @@
-const date1 = new Date(2019, 7, 1, 23, 59, 59)
+const date1 = new Date(2019, 7, 1)
 const date2 = new Date(2019, 7, 2)
 
 export const invoiceData = {

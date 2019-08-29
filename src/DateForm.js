@@ -20,14 +20,16 @@ class DateForm extends React.Component {
   }
 
   handleStartDateChange = (startDate) => {
+    let adjustedDate = new Date(startDate.toDateString());
     this.setState({
-      startDate: startDate
+      startDate: adjustedDate
     }, () => this.filterInvoiceDataByDate())
   }
 
   handleEndDateChange = (endDate) => {
+    let adjustedDate = new Date(endDate.toDateString());
     this.setState({
-      endDate: endDate
+      endDate: adjustedDate
     }, () => this.filterInvoiceDataByDate())
   }
 
@@ -40,9 +42,9 @@ class DateForm extends React.Component {
   }
 
   render() {
-    console.log(this.state.startDate)
-    console.log(this.state.invoices)
-    console.log(this.state.endDate)
+    // console.log(this.state.startDate)
+    // console.log(this.state.invoices)
+    // console.log(this.state.endDate)
     return (
       <div>
         <h3>Start Date:</h3>
