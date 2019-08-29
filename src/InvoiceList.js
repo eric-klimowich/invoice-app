@@ -18,7 +18,7 @@ const InvoiceList = props => {
           {props.invoices.map(invoice => <Invoice key={invoice.invoicenum} invoice={invoice} />)}
           <h2>Invoice Totals</h2>
           <p>No. of invoices: {props.invoices.length}</p>
-          <p>Total of invoices: {invoiceTotal}</p>
+          <p>Total of invoices: {'$' + invoiceTotal.toFixed(2)}</p>
         </div>
       )
     } else {

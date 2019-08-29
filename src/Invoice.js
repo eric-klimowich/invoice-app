@@ -6,9 +6,9 @@ const renderInvoices = (props, detailAmountTotal) => {
       <div>
         <h2>Invoice num: {props.invoice.invoicenum}</h2>
         <p>Invoice date: {props.invoice.invoicedate.toDateString()}</p>
-        <p>Invoice amount: {props.invoice.invoiceamount}</p>
-        <p>Detail amount total: {detailAmountTotal}</p>
-        <p>Discrepency amount: {props.invoice.invoiceamount - detailAmountTotal}</p>
+        <p>Invoice amount: {'$' + props.invoice.invoiceamount.toFixed(2)}</p>
+        <p>Detail amount total: {'$' + detailAmountTotal.toFixed(2)}</p>
+        <p>Discrepency amount: {'$' + (props.invoice.invoiceamount - detailAmountTotal).toFixed(2)}</p>
       </div>
     )
   } else if (props.trackingArray) {
@@ -22,9 +22,9 @@ const renderInvoices = (props, detailAmountTotal) => {
       <h2>Invoice num: {props.invoice.invoicenum}</h2>
       <p>Invoice date: {props.invoice.invoicedate.toDateString()}</p>
       <p>Tracking number: {props.trackingArray.trackingno}</p>
-      <p>Detail amount: {props.trackingArray.detailamount}</p>
-      <p>Charges amount: {chargesAmountTotal}</p>
-      <p>Discrepency amount: {props.trackingArray.detailamount - chargesAmountTotal}</p>
+      <p>Detail amount: {'$' + props.trackingArray.detailamount.toFixed(2)}</p>
+      <p>Charges amount: {'$' + chargesAmountTotal.toFixed(2)}</p>
+      <p>Discrepency amount: {'$' + (props.trackingArray.detailamount - chargesAmountTotal).toFixed(2)}</p>
       </div>
     )
   } else {
@@ -32,7 +32,7 @@ const renderInvoices = (props, detailAmountTotal) => {
       <div>
         <h2>Invoice num: {props.invoice.invoicenum}</h2>
         <p>Invoice date: {props.invoice.invoicedate.toDateString()}</p>
-        <p>Invoice amount: {props.invoice.invoiceamount}</p>
+        <p>Invoice amount: {'$' + props.invoice.invoiceamount.toFixed(2)}</p>
       </div>
     )
   }
